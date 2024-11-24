@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { ThemeProvider } from 'next-themes';
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
-import { Github, Linkedin, Mail, GraduationCap, Trophy, Building2 } from 'lucide-react';
+import { Github, Linkedin, Mail, GraduationCap, Trophy } from 'lucide-react';
 import { content } from './data/content';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <ThemeProvider attribute="class" defaultTheme="system">
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <Navbar />
-
+        
         {/* Hero Section */}
         <section id="home" className="pt-32 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,10 +127,7 @@ function App() {
         {/* Experience Section */}
         <section id="experience" className="py-16 bg-white dark:bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-12 text-center flex items-center justify-center">
-              <Building2 className="w-8 h-8 mr-2" />
-              {t('experience.title')}
-            </h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">{t('experience.title')}</h2>
             <div className="space-y-8">
               {localizedContent.experiences.map((exp, index) => (
                 <motion.div
